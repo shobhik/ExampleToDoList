@@ -131,12 +131,10 @@ public class ListActivity extends AppCompatActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                AlertDialog.Builder chooserBuilder = new AlertDialog.Builder(mContext);
-
-                AlertDialog ad = chooserBuilder.create();
+                AlertDialog.Builder ad = new AlertDialog.Builder(mContext);
                 ad.setTitle(values.get(position));
                 ad.setMessage(detailvalues.get(position));
-                chooserBuilder.show();
+                ad.create().show();
             }
         });
 
